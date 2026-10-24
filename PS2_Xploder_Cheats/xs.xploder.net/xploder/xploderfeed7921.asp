@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:xpl="http://xs.xploder.net/ns/xploder">
+<channel>
+<title>Spartan Total War - Cheats</title>
+<link>http://xs.xploder.net/xploder/xploderui.asp?un=xdnv2&amp;platformid=1&amp;tab=gc&amp;gameid=18632</link>
+<description>A list of cheats for Spartan Total War.</description>
+<language>en-gb</language>
+<copyright>Copyright 2006, Fire-International</copyright>
+<webMaster>info@firesoft.eu.com</webMaster>
+<category>cheats</category>
+<generator>Xploder Feed Server v1.0</generator>
+<image>
+<url>http://xs.xploder.net/xploder/images/xdn/ps2cheat2.gif</url>
+<title>Spartan Total War - Cheats</title>
+<link>http://www.xploder.net/index.asp?a=cheats</link>
+</image>
+<xpl:gameid>18632</xpl:gameid>
+<item>
+<title>{5Mastercode</title>
+<link>http://xs.xploder.net/xploder/xploderui.asp?un=xdnv2&amp;platformid=1&amp;tab=gc&amp;gameid=18632</link>
+<description></description>
+<author>Xploder &lt;support@xploder.net&gt;</author>
+<category>cheats</category>
+<guid>http://xs.xploder.net/cheat/896041</guid>
+<pubDate>13 Oct 2005 17:06:00 GMT</pubDate>
+<xpl:cheatid>896041</xpl:cheatid>
+<xpl:order>1</xpl:order>
+<xpl:availability>Available</xpl:availability>
+</item>
+<item>
+<title>{3Infinite:</title>
+<link>http://xs.xploder.net/xploder/xploderui.asp?un=xdnv2&amp;platformid=1&amp;tab=gc&amp;gameid=18632</link>
+<description></description>
+<author>Xploder &lt;support@xploder.net&gt;</author>
+<category>cheats</category>
+<guid>http://xs.xploder.net/cheat/896042</guid>
+<pubDate>13 Oct 2005 17:06:00 GMT</pubDate>
+<xpl:cheatid>896042</xpl:cheatid>
+<xpl:order>2</xpl:order>
+<xpl:availability>Available</xpl:availability>
+</item>
+<item>
+<title>Health</title>
+<link>http://xs.xploder.net/xploder/xploderui.asp?un=xdnv2&amp;platformid=1&amp;tab=gc&amp;gameid=18632</link>
+<description></description>
+<author>Xploder &lt;support@xploder.net&gt;</author>
+<category>cheats</category>
+<guid>http://xs.xploder.net/cheat/896043</guid>
+<pubDate>13 Oct 2005 17:06:00 GMT</pubDate>
+<xpl:cheatid>896043</xpl:cheatid>
+<xpl:order>3</xpl:order>
+<xpl:availability>Available</xpl:availability>
+</item>
+<item>
+<title>Rage</title>
+<link>http://xs.xploder.net/xploder/xploderui.asp?un=xdnv2&amp;platformid=1&amp;tab=gc&amp;gameid=18632</link>
+<description></description>
+<author>Xploder &lt;support@xploder.net&gt;</author>
+<category>cheats</category>
+<guid>http://xs.xploder.net/cheat/896044</guid>
+<pubDate>13 Oct 2005 17:06:00 GMT</pubDate>
+<xpl:cheatid>896044</xpl:cheatid>
+<xpl:order>4</xpl:order>
+<xpl:availability>Available</xpl:availability>
+</item>
+<item>
+<title>Arrows</title>
+<link>http://xs.xploder.net/xploder/xploderui.asp?un=xdnv2&amp;platformid=1&amp;tab=gc&amp;gameid=18632</link>
+<description></description>
+<author>Xploder &lt;support@xploder.net&gt;</author>
+<category>cheats</category>
+<guid>http://xs.xploder.net/cheat/896045</guid>
+<pubDate>13 Oct 2005 17:06:00 GMT</pubDate>
+<xpl:cheatid>896045</xpl:cheatid>
+<xpl:order>5</xpl:order>
+<xpl:availability>Available</xpl:availability>
+</item>
+<item>
+<title>{3Unlock:</title>
+<link>http://xs.xploder.net/xploder/xploderui.asp?un=xdnv2&amp;platformid=1&amp;tab=gc&amp;gameid=18632</link>
+<description></description>
+<author>Xploder &lt;support@xploder.net&gt;</author>
+<category>cheats</category>
+<guid>http://xs.xploder.net/cheat/896046</guid>
+<pubDate>13 Oct 2005 17:06:00 GMT</pubDate>
+<xpl:cheatid>896046</xpl:cheatid>
+<xpl:order>6</xpl:order>
+<xpl:availability>Available</xpl:availability>
+</item>
+<item>
+<title>Single Mission Replay</title>
+<link>http://xs.xploder.net/xploder/xploderui.asp?un=xdnv2&amp;platformid=1&amp;tab=gc&amp;gameid=18632</link>
+<description></description>
+<author>Xploder &lt;support@xploder.net&gt;</author>
+<category>cheats</category>
+<guid>http://xs.xploder.net/cheat/896047</guid>
+<pubDate>13 Oct 2005 17:06:00 GMT</pubDate>
+<xpl:cheatid>896047</xpl:cheatid>
+<xpl:order>7</xpl:order>
+<xpl:availability>Available</xpl:availability>
+</item>
+</channel>
+</rss>

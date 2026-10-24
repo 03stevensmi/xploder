@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:xpl="http://xs.xploder.net/ns/xploder">
+<channel>
+<title>Harry Potter: Quidditch World Cup - Cheats</title>
+<link>http://xs.xploder.net/xploder/xploderui.asp?un=xdnv2&amp;platformid=1&amp;tab=gc&amp;gameid=14720</link>
+<description>A list of cheats for Harry Potter: Quidditch World Cup.</description>
+<language>en-gb</language>
+<copyright>Copyright 2006, Fire-International</copyright>
+<webMaster>info@firesoft.eu.com</webMaster>
+<category>cheats</category>
+<generator>Xploder Feed Server v1.0</generator>
+<image>
+<url>http://xs.xploder.net/xploder/images/xdn/ps2cheat2.gif</url>
+<title>Harry Potter: Quidditch World Cup - Cheats</title>
+<link>http://www.xploder.net/index.asp?a=cheats</link>
+</image>
+<xpl:gameid>14720</xpl:gameid>
+<item>
+<title>{5MasterCode</title>
+<link>http://xs.xploder.net/xploder/xploderui.asp?un=xdnv2&amp;platformid=1&amp;tab=gc&amp;gameid=14720</link>
+<description></description>
+<author>Xploder &lt;support@xploder.net&gt;</author>
+<category>cheats</category>
+<guid>http://xs.xploder.net/cheat/637211</guid>
+<pubDate>12 Nov 2003 14:40:00 GMT</pubDate>
+<xpl:cheatid>637211</xpl:cheatid>
+<xpl:order>1</xpl:order>
+<xpl:availability>Available</xpl:availability>
+</item>
+<item>
+<title>Have All Wizard Cards</title>
+<link>http://xs.xploder.net/xploder/xploderui.asp?un=xdnv2&amp;platformid=1&amp;tab=gc&amp;gameid=14720</link>
+<description>Played game.. It's piss easy. Managed to win the entire game on 1st go !  Then trained between a new game (0 cards) and a game with all the cards. And found the bitfields that are used for card storage.. Set them all to be 0xffffffff</description>
+<author>Xploder &lt;support@xploder.net&gt;</author>
+<category>cheats</category>
+<guid>http://xs.xploder.net/cheat/637248</guid>
+<pubDate>12 Nov 2003 14:40:00 GMT</pubDate>
+<xpl:cheatid>637248</xpl:cheatid>
+<xpl:order>11</xpl:order>
+<xpl:availability>Available</xpl:availability>
+</item>
+</channel>
+</rss>
