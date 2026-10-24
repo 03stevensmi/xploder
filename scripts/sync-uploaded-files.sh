@@ -11,7 +11,9 @@ Usage:
 
 Paths are relative to the repository root. By default, the script scans the
 whole repository and previews changes; pass --apply to commit and push them.
-Each batch gets an automatic "Sync uploaded files (batch X of Y)" commit.
+It compares against the complete fetched Git tree, not GitHub's directory
+listing. Each batch gets an automatic "Sync uploaded files (batch X of Y)"
+commit.
 EOF
 }
 
@@ -68,8 +70,6 @@ done
 script_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
 repo_root=$(git -C "$script_dir" rev-parse --show-toplevel) ||
   die "Run this script from inside a Git repository"
-script_path=$(realpath -- "${BASH_SOURCE[0]}")
-script_rel=${script_path#"$repo_root"/}
 
 if [[ "$source_arg" = /* ]]; then
   source_dir=$(cd -- "$source_arg" 2>/dev/null && pwd) ||
@@ -82,6 +82,11 @@ case "$source_dir/" in
   "$repo_root/"*) ;;
   *) die "Source directory must be inside the repository" ;;
 esac
+if [[ "$source_dir" == "$repo_root" ]]; then
+  source_prefix=
+else
+  source_prefix=${source_dir#"$repo_root"/}/
+fi
 
 if [[ -z "$branch" ]]; then
   default_ref=$(git -C "$repo_root" symbolic-ref --quiet "refs/remotes/$remote/HEAD") ||
@@ -97,10 +102,8 @@ current_branch=$(git -C "$repo_root" branch --show-current)
 [[ "$current_branch" == "$branch" ]] ||
   die "Check out '$branch' before running this script (currently on '${current_branch:-detached HEAD}')"
 
-git -C "$repo_root" diff --quiet ||
-  die "Tracked working-tree changes exist; commit or stash them first"
 git -C "$repo_root" diff --cached --quiet ||
-  die "Staged changes exist; commit or unstage them first"
+  die "Staged changes exist; commit or unstage them first so they are not included"
 
 git -C "$repo_root" fetch "$remote" \
   "+refs/heads/$branch:refs/remotes/$remote/$branch" ||
@@ -113,24 +116,38 @@ read -r remote_only local_only <<<"$counts"
   die "Local '$branch' must match '$remote/$branch'; synchronize it before continuing"
 
 declare -A remote_paths=()
+remote_file_count=0
 while IFS= read -r -d '' path; do
   remote_paths["$path"]=1
+  if [[ -z "$source_prefix" || "$path" == "$source_prefix"* ]]; then
+    ((remote_file_count += 1))
+  fi
 done < <(git -C "$repo_root" ls-tree -r -z --name-only "refs/remotes/$remote/$branch")
 
 files=()
+source_file_count=0
+missing_file_count=0
+ignored_file_count=0
 while IFS= read -r -d '' file; do
   relative_path=${file#"$repo_root"/}
-  [[ "$relative_path" != "$script_rel" ]] || continue
+  ((source_file_count += 1))
   [[ -z "${remote_paths[$relative_path]+present}" ]] || continue
+  ((missing_file_count += 1))
   if git -C "$repo_root" check-ignore -q -- "$relative_path"; then
+    ((ignored_file_count += 1))
     continue
   fi
   files+=("$relative_path")
 done < <(find "$source_dir" -type d -name .git -prune -o \
   \( -type f -o -type l \) -print0)
 
+printf "Remote Git tree: %d file(s) under '%s' on %s/%s.\n" \
+  "$remote_file_count" "${source_prefix:-.}" "$remote" "$branch"
+printf "Local source: %d file(s); missing from the remote tree: %d (%d ignored).\n" \
+  "$source_file_count" "$missing_file_count" "$ignored_file_count"
+
 if ((${#files[@]} == 0)); then
-  printf "No untracked files are missing from '%s/%s'.\n" "$remote" "$branch"
+  printf "All local source files are already present on '%s/%s'.\n" "$remote" "$branch"
   exit 0
 fi
 
